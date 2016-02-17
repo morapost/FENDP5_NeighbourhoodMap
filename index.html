@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Neirghborhood Map</title>
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="area" class="area">
+   <form action="#">
+            <input placeholder="Search…" type="search" data-bind="textInput: filter, valueUpdate: 'afterkeydown', event: { keyup: filterMarkers } "autocomplete="off">
+   </form>
+   <ul data-bind="foreach: filterSearch" class="places">
+       <li class="places" data-bind="text: name, click: $parent.selectMarker"></li>
+  </ul>
+  <h3 id="nytimes-header" data-bind="text: header"></h3><a  href="#" id="clear"> Clear News </a>
+  <ul id="nytimes-articles" class="article-list">
+  </ul>
+</div>
+  <div id="map" class="google-maps">
+     </div>
+
+
+   <script src="js/lib/jquery.min.js"></script>
+   <script   src="js/lib/knockout-3.2.0.js"></script>
+
+    <script src="js/listview.js"></script>
+    <script src="js/app.js"></script>
+    <script> function googleSuccess(){startViewModel()}; function googleError(){alert("Sorry! The page could not load google maps at this moment")};</script>
+    <script async  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpI-xQAM0PvnF8SMC5Lji3wWjQLlZqs4I&callback=googleSuccess"
+         onerror= "googleError()"></script>
+    
+</body>
+</html>

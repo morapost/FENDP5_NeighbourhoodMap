@@ -1,0 +1,65 @@
+  #area,
+#map,
+body,
+html {
+    height: 100%;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+.google-maps {
+    width: 80%;
+}
+.area {
+    width: 20%;
+    float: left;
+}
+input {
+    width: 100%;
+}
+ul {
+    list-style: none;
+}
+h3 {
+    color: green;
+}
+p {
+    font-size: .8em;
+    line-height: 16px;
+}
+.places {
+    cursor: pointer;
+}
+#clear{
+
+    text-decoration: none;
+
+}
+
+@media screen and (max-width: 900px) {
+    #area {
+        width: 40%;
+    }
+    #map {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 600px) {
+     #area,
+    #map {
+        width: 100%;
+        margin:0;
+    }
+    #area {
+        height: 20%;
+        float: none;
+        overflow: auto;
+    }
+    #map{height: 80%;}
+
+    .places li{
+        padding: 10px;
+    }
+}
